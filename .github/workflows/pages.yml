@@ -24,11 +24,11 @@ jobs:
         with:
           node-version: '16'
           # cache: npm
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-        with:
-          # https://nextjs.org/docs/api-reference/next/image#unoptimized
-          static_site_generator: next
+      # - name: Setup Pages
+      #   uses: actions/configure-pages@v2
+      #   with:
+      #     # https://nextjs.org/docs/api-reference/next/image#unoptimized
+      #     static_site_generator: next
       # - name: Restore cache
       #   uses: actions/cache@v3
       #   with:
