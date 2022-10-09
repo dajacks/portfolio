@@ -6,7 +6,7 @@ export default function ThankYou() {
   return (
     <>
       <Head>
-        <title>You&apos;re subscribed - Spencer Sharp</title>
+        <title>You&apos;re subscribed - Danielle Jackson</title>
         <meta
           name="description"
           content="Thanks for subscribing to my newsletter."

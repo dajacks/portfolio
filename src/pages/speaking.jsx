@@ -29,7 +29,7 @@ export default function Speaking() {
   return (
     <>
       <Head>
-        <title>Speaking - Spencer Sharp</title>
+        <title>Speaking - Danielle Jackson</title>
         <meta
           name="description"
           content="I've spoken at events all around the world and been interviewed for many podcasts."
