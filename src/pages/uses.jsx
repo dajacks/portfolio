@@ -79,7 +79,7 @@ export default function Uses() {
             </Tool>
             <Tool title="TablePlus">
               Great software for working with databases. Has saved me from
-              building about a thousand admin interfaces for my various projects
+              building about a thousand admin interfaces for my various Portfolio
               over the years.
             </Tool>
           </ToolsSection>
