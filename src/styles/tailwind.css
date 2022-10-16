@@ -4,16 +4,28 @@
 
 @font-face {
     font-family: 'Didot';
-    src: local('Didot'), url(../../public/fonts/Didot/Didot-Regular.ttf) format('ttf');
+    src: local('Didot'), url(../../public/fonts/Didot/Didot-LT-Std-Italic.otf) format('otf');
 }
 
-h1,
+@font-face {
+    font-family: 'DidotBoldItalic';
+    src: local('DidotBoldItalic'), url(../../public/fonts/Didot/Didot-Bold-Italic.ttf) format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'DidotBoldItalic';
+    font-weight: normal;
+    font-style: italic;
+}
+
 h2,
 h3,
 h4,
 h5 {
     font-family: 'Didot';
-    font-weight: bold;
+    font-weight: normal;
     font-style: italic;
 }
 
