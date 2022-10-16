@@ -1,4 +1,20 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import './prism.css';
+
+@font-face {
+    font-family: 'Didot';
+    src: local('Didot'), url(../../public/fonts/Didot/Didot-Regular.ttf) format('ttf');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Didot';
+    font-weight: bold;
+    font-style: italic;
+}
+
 @import 'tailwindcss/utilities';
