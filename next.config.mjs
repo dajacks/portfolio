@@ -7,7 +7,6 @@ const nextConfig = {
   pageExtensions: ['jsx', 'mdx'],
   reactStrictMode: true,
   swcMinify: true,
-  basePath: '/',
   experimental: {
     newNextLinkBehavior: true,
     scrollRestoration: true,
