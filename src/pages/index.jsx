@@ -17,36 +17,14 @@ import image2 from '@/images/photos/Image-2.png'
 import image3 from '@/images/photos/Image-3.png'
 import image4 from '@/images/photos/Image-4.png'
 import image5 from '@/images/photos/Image-5.png'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import logo826 from '@/images/photos/826_Logo_Blue.png'
+import logoBr8kthru from '@/images/photos/Br8kthru.jpg'
+import logoEnIn from '@/images/photos/Environmental Initiative.jpg'
+import logoMNYC from '@/images/photos/MNYCLogo_ShortNavy.png'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
-
-function MailIcon(props) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
-    >
-      <path
-        d="M2.75 7.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
-        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
-      />
-      <path
-        d="m4 6 6.024 5.479a2.915 2.915 0 0 0 3.952 0L20 6"
-        className="stroke-zinc-400 dark:stroke-zinc-500"
-      />
-    </svg>
-  )
-}
+import { MailIcon } from './about'
 
 function BriefcaseIcon(props) {
   return (
@@ -139,35 +117,35 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
+      company: 'Br8kthru',
+      title: 'Senior Content Strategist',
+      logo: logoBr8kthru,
+      start: '2022',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
+      company: 'Minnesota Youth Collective',
+      title: 'Communications Director',
+      logo: logoMNYC,
+      start: '2020',
+      end: '2022',
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
+      company: 'Environmental Initiative',
+      title: 'Communications Specialist',
+      logo: logoEnIn,
+      start: '2018',
+      end: '2020',
     },
     {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      company: 'Mid-Continent Oceanographic Institute',
+      title: 'Community Outreach Coordinator',
+      logo: logo826,
+      start: '2017',
+      end: '2018',
     },
   ]
 
@@ -180,8 +158,13 @@ function Resume() {
       <ol className="mt-6 space-y-4">
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
-            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-white dark:bg-zinc-800 dark:ring-0">
+              <Image
+                src={role.logo}
+                alt=""
+                className="w-7 rounded-full"
+                unoptimized
+              />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
@@ -221,25 +204,51 @@ function Resume() {
 
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+  const images = [
+    {
+      image: image1,
+      link: '/about',
+    },
+    {
+      image: image2,
+      link: '/thoughts',
+    },
+    {
+      image: image3,
+      link: '/kiwi',
+    },
+    {
+      image: image4,
+      link: '/portfolio',
+    },
+    {
+      image: image5,
+      link: '/uses',
+    },
+  ]
 
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
-          <div
-            key={image.src}
-            className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
-            )}
-          >
-            <Image
-              src={image}
-              alt=""
-              sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>
-        ))}
+        {images.map((image, imageIndex) => {
+          const hoverClassName =
+            imageIndex % 2 == 0 ? 'hover:rotate-3' : 'hover:-rotate-3'
+          return (
+            <div
+              key={image.image.src}
+              className={`relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 transition-all ${hoverClassName} dark:bg-zinc-800 sm:w-72 sm:rounded-2xl`}
+            >
+              <a href={image.link}>
+                <Image
+                  src={image.image}
+                  alt=""
+                  sizes="(min-width: 640px) 18rem, 11rem"
+                  className="absolute inset-0 h-full w-full cursor-pointer object-cover"
+                />
+              </a>
+            </div>
+          )
+        })}
       </div>
     </div>
   )
@@ -249,9 +258,7 @@ export default function Home({ articles }) {
   return (
     <>
       <Head>
-        <title>
-          Danielle Jackson - Thinker, blinker, trinker
-        </title>
+        <title>Danielle Jackson | Content, Storytelling & Puzzle Solving</title>
         <meta
           name="description"
           content="I'm Danielle, a writer based in Minneapolis."
@@ -263,30 +270,19 @@ export default function Home({ articles }) {
             Danielle Jackson.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I&apos;m Danielle, a ... and ... based in .... I&apos;m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            Hi. I&apos;m Danielle, a content specialist, digital storyteller,
+            and puzzle solver in Minneapolis.
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://twitter.com"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
-            <SocialLink
-              href="https://instagram.com"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="https://github.com"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
             <SocialLink
               href="https://www.linkedin.com/in/thedaniellejackson/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
+            />
+            <SocialLink
+              href="mailto:danielle@daniellejackson.co"
+              aria-label="Get In Touch"
+              icon={MailIcon}
             />
           </div>
         </div>
