@@ -26,7 +26,7 @@ function SocialLink({ className, href, children, icon: Icon }) {
   )
 }
 
-function MailIcon(props) {
+export function MailIcon(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <path
@@ -41,7 +41,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About - Danielle Jackson</title>
+        <title>About | Danielle Jackson</title>
         <meta
           name="description"
           content="I'm Danielle Jackson. I live in Minneapolis, where I write the future."
@@ -57,62 +57,66 @@ export default function About() {
                 sizes="(min-width: 1024px) 32rem, 20rem"
                 className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
               />
+              <Image
+                src={portraitImage}
+                alt=""
+                sizes="(min-width: 1024px) 32rem, 20rem"
+                className="aspect-square -rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+              />
             </div>
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I&apos;m Danielle Jackson. I live in Minneapolis, where I write the
-              future.
+              Hi. I&apos;m Danielle, a content specialist, digital storyteller,
+              and puzzle solver in Minneapolis.
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                I&apos;ve loved making things for as long as I can remember, and
-                wrote my first program when I was 6 years old, just two weeks
-                after my mom brought home the brand new Macintosh LC 550 that I
-                taught myself to type on.
+                Fun fact: someone who loves words is a “logophile.” (Not someone
+                who loves representational graphics, apparently.) As a
+                logophile, I&apos;m passionate about helping others find just
+                the right words to share their thoughts, intentions, and
+                differentiators.
               </p>
               <p>
-                The only thing I loved more than computers as a kid was space.
-                When I was 8, I climbed the 40-foot oak tree at the back of our
-                yard while wearing my older sister&apos;s motorcycle helmet, counted
-                down from three, and jumped — hoping the tree was tall enough
-                that with just a bit of momentum I&apos;d be able to get to orbit.
+                From a young age, I&apos;ve had what some might call a way with
+                words. In fact, a family favorite story to tell about my
+                toddlerhood is that I invented my own words, and would use them
+                vigorously to demonstrate excitement or enthusiasm.
               </p>
               <p>
-                I spent the next few summers indoors working on a rocket design,
-                while I recovered from the multiple surgeries it took to fix my
-                badly broken legs. It took nine iterations, but when I was 15 I
-                sent my dad&apos;s Blackberry into orbit and was able to transmit a
-                photo back down to our family computer from space.
+                Beginning in about first grade, I began to channel that
+                enthusiasm into writing stories, working hard to find just the
+                right words to describe what I meant.
+              </p>
+              <p>Today, I&apos;m much the same.</p>
+              <p>
+                After studying English and sociology in college (Go Blue!), I
+                turned to communications, development, and marketing, my very
+                own version of “do what you love and you&apos;ll never work a
+                day in your life.” I started my career in the nonprofit sector,
+                working in education, environment, and politics before
+                transitioning to working at a digital marketing agency and
+                freelancing.
               </p>
               <p>
-                Today, I&apos;m the founder of Planetaria, where we&apos;re working on
-                civilian space suits and manned shuttle kits you can assemble at
-                home so that the next generation of kids really <em>can</em>{' '}
-                make it to orbit — from the comfort of their own backyards.
+                No matter where I am, or what I&apos;m working on, I&apos;m
+                still particular about finding just the right words to describe
+                what I mean (even if I&apos;m not making them up anymore).
               </p>
             </div>
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <SocialLink href="#" icon={TwitterIcon}>
-                Follow on Twitter
-              </SocialLink>
-              <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-                Follow on Instagram
-              </SocialLink>
-              <SocialLink href="#" icon={GitHubIcon} className="mt-4">
-                Follow on GitHub
-              </SocialLink>
               <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
-                Follow on LinkedIn
+                LinkedIn
               </SocialLink>
               <SocialLink
-                href="mailto:djacksoncopy@gmail.com@gmail.com"
+                className="mt-2"
+                href="mailto:danielle@daniellejackson.co"
                 icon={MailIcon}
-                className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
               >
-                djacksoncopy@gmail.com@gmail.com
+                Email
               </SocialLink>
             </ul>
           </div>
