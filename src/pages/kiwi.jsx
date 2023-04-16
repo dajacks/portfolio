@@ -3,9 +3,12 @@ import Head from 'next/head'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import kiwiPicture from '@/images/photos/Image-3.png'
+import kiwiPicture1 from '@/images/photos/Kiwi-1.png'
+import kiwiPicture2 from '@/images/photos/Kiwi-2.png'
+import kiwiPicture3 from '@/images/photos/Kiwi-3.png'
+import kiwiPicture4 from '@/images/photos/Kiwi-4.png'
 
-const kiwiPictures = [kiwiPicture, kiwiPicture, kiwiPicture, kiwiPicture]
+const kiwiPictures = [kiwiPicture1, kiwiPicture2, kiwiPicture3, kiwiPicture4]
 
 function LinkIcon(props) {
   return (

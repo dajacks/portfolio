@@ -3,47 +3,58 @@ import Head from 'next/head'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoArticles from '@/images/photos/article.png'
+import logoContentStrategy from '@/images/photos/contentstrategy.png'
+import logoEmail from '@/images/photos/email.png'
+import logoSocial from '@/images/photos/social.png'
+import logoSocialStrategy from '@/images/photos/socialstrategy.png'
+import logoWebCopy from '@/images/photos/webcopy.png'
+import logoOther from '@/images/photos/other.png'
 
 const portfolio = [
   {
-    name: 'Planetaria',
+    name: 'Articles & Blogs',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      'Say what you mean and mean what you say. Articles using SEO best practices help you share information about your work while improving your online footprint.',
+    link: { href: '/portfolio/article.pdf', label: 'Article Sample' },
+    logo: logoArticles,
   },
   {
-    name: 'Animaginary',
+    name: 'Content Strategy',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+      'There\'s no such thing as "stand-alone content." With a holistic content strategy, all your content will work together to achieve your desired results.',
+    link: {
+      href: '/portfolio/contentstrategy.pdf',
+      label: 'Content Strategy Sample',
+    },
+    logo: logoContentStrategy,
   },
   {
-    name: 'HelioStream',
+    name: 'Email',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
+      'How many emails do you get a day? Make yours count. From regular email newsletters to custom workflows triggered by users, email helps you stay top of mind.',
+    link: { href: '/portfolio/email.pdf', label: 'Email Sample' },
+    logo: logoEmail,
   },
   {
-    name: 'cosmOS',
+    name: 'Organic Social',
     description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
+      "Over half of the global population is on social media. Organic social media helps you build brand awareness and engage with your audience, no matter what platforms you're using.",
+    link: {
+      href: '/portfolio/socialstrategy.pdf',
+      label: 'Organic Social Sample',
+    },
+    logo: logoSocial,
   },
   {
-    name: 'OpenShuttle',
+    name: 'Web Copy',
     description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+      'There are over a billion websites on the internet. Be confident yours is a good one with a website that represents your organization and is mindful of current best practices.',
+    link: {
+      href: '/portfolio/webcopy.pdf',
+      label: 'Web Copy Sample',
+    },
+    logo: logoWebCopy,
   },
 ]
 

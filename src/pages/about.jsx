@@ -10,7 +10,8 @@ import {
   GitHubIcon,
   LinkedInIcon,
 } from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait.jpg'
+import portraitImage from '@/images/photos/Danielle-1.png'
+import portraitImage2 from '@/images/photos/Danielle-2.png'
 
 function SocialLink({ className, href, children, icon: Icon }) {
   return (
@@ -58,7 +59,7 @@ export default function About() {
                 className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
               />
               <Image
-                src={portraitImage}
+                src={portraitImage2}
                 alt=""
                 sizes="(min-width: 1024px) 32rem, 20rem"
                 className="aspect-square -rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"

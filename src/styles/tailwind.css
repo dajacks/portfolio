@@ -2,31 +2,23 @@
 @import 'tailwindcss/components';
 @import './prism.css';
 
-@font-face {
-    font-family: 'Didot';
-    src: local('Didot'), url(../../public/fonts/Didot/Didot-LT-Std-Italic.otf) format('otf');
-}
-
-@font-face {
-    font-family: 'DidotBoldItalic';
-    src: local('DidotBoldItalic'), url(../../public/fonts/Didot/Didot-Bold-Italic.ttf) format('ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
 h1 {
-    font-family: 'DidotBoldItalic';
-    font-weight: normal;
-    font-style: italic;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: bold;
+  font-style: italic;
 }
 
 h2,
 h3,
 h4,
 h5 {
-    font-family: 'Didot';
-    font-weight: normal;
-    font-style: italic;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+p {
+  font-weight: 300;
 }
 
 @import 'tailwindcss/utilities';
