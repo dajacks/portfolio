@@ -41,7 +41,7 @@ const portfolio = [
     description:
       "Over half of the global population is on social media. Organic social media helps you build brand awareness and engage with your audience, no matter what platforms you're using.",
     link: {
-      href: '/portfolio/socialstrategy.pdf',
+      href: '/portfolio/organicsocial.pdf',
       label: 'Organic Social Sample',
     },
     logo: logoSocial,
